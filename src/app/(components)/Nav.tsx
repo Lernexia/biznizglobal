@@ -6,7 +6,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 
 function Nav() {
-    const duration = 0.5 //4.3
+    const duration = 4.3
 
     return (
         <motion.nav

@@ -18,7 +18,7 @@ function ShortIntro() {
     const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     return (
-        <section className='min-h-full bg-white  w-full'>
+        <section className='min-h-full bg-white  w-full overflow-x-hidden'>
             <div className=' py-20'>
                 <div className="sizer flex justify-between gap-4 max-[750px]:flex-col">
                     <motion.div

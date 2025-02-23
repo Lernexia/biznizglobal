@@ -15,7 +15,7 @@ function Hero() {
     gsap.registerPlugin(ScrollTrigger);
 
 
-    const duration = 0.5 //4.8
+    const duration =4.8
 
     const parallaxRef = useRef(null);
 

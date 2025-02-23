@@ -13,9 +13,10 @@ import BestSolutionForYourBusiness from "./(components)/BestSolutionForYourBusin
 import StickyImage from "./(components)/StickyImage";
 import HowWeWork from "./(components)/HowWeWork";
 import { ArrowUp, Clock, Mail, MapPin, PhoneCall } from "lucide-react";
+import AnimatedText from "@/lib/widget/TextAnimation";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [width, setWidth] = useState(0);
   const handleResize = () => setWidth(window.innerWidth);
 
@@ -46,11 +47,11 @@ export default function Home() {
   return (
     <main className={`relative text-black min-h-screen ${isLoading ? "overflow-hidden" : ""}`}>
       {!isLoading && width > 1024 && <CustomCursor />}
-      {!isLoading && (<button onClick={()=>window.scrollTo(0, 0)} className="fixed z-[99] bottom-5 right-5 rounded-full bg-white border-2 border-gold1  p-3">
+      {!isLoading && (<button onClick={() => window.scrollTo(0, 0)} className="fixed z-[99] bottom-5 right-5 rounded-full bg-white border-2 border-gold1  p-3">
         <ArrowUp size={22} />
       </button>)}
 
-      {/* <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
         {isLoading && (
           <div className="bg-gold1/5 h-screen w-screen flex justify-center items-center fixed overflow-hidden">
             <motion.div
@@ -65,18 +66,18 @@ export default function Home() {
           </div>
         )}
       </AnimatePresence>
- */}
 
+      
       <motion.div
-        // initial={{ opacity: 0, scale: 1, y: 100, filter: "blur(10px)", background: '#00000046' }}
-        // whileInView={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)", background: 'transparent' }}
-        // transition={{
-        //   duration: 1,
-        //   delay: 3.8,
-        //   ease: [0.76, 0, 0.24, 1],
-        // }}
-        // id="hero"
-        className="landing-page "
+        initial={{ opacity: 0, scale: 1, y: 100, filter: "blur(10px)", background: '#00000046' }}
+        whileInView={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)", background: 'transparent' }}
+        transition={{
+          duration: 1,
+          delay: 3.8,
+          ease: [0.76, 0, 0.24, 1],
+        }}
+        id="hero"
+        className="landing-page relative top-0"
       >
 
         <Hero />
@@ -259,6 +260,7 @@ export default function Home() {
         </footer>
 
       </motion.div>
+
     </main>
   );
 }
