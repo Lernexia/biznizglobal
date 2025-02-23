@@ -2,20 +2,132 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+  html,
+  body {
+    cursor: default;
+  }
+
+  a {
+    cursor: pointer;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.landing-page {
+  min-height: 100vh;
 }
+
+
+
+html,
+body {
+  cursor: none;
+}
+
+.sizer {
+  width: 97%;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 25px 0 25px;
+}
+
+.custom-cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.spin {
+  animation: spin 5s linear infinite;
+}
+
+.animate-spin-illustrtion {
+  animation: animate-spin-illustrtion 5s linear infinite
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-spin-illustrtion {
+  0% {
+    transform: rotate(-3deg);
+  }
+
+  100% {
+    transform: rotate(3deg);
+  }
+}
+
+
+.leaf-animation {
+  animation: shakeLeaf 5s ease-in-out infinite;
+}
+
+@keyframes shakeLeaf {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(3deg) translateX(3px);
+  }
+  50% {
+    transform: rotate(-3deg) translateX(-3px);
+  }
+  75% {
+    transform: rotate(3deg) translateX(3px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+
+
+.lens-animation {
+  animation: lenseanimation 5s ease-in-out infinite;
+}
+
+@keyframes lenseanimation {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(3deg) translateX(3px);
+  }
+  50% {
+    transform: rotate(-3deg) translateX(-3px);
+  }
+}
+
