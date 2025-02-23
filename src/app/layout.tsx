@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
       </head>
       <body
-        className={`bg-[#ffff] text-black antialiased h-screen ${sansationRegFont.className}`} // Apply the regular font here
+        className={`bg-[#ffff] text-black antialiased ${sansationRegFont.className}`} // Apply the regular font here
       >
         <SmoothScrolling>
           {children}

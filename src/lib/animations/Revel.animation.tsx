@@ -5,10 +5,14 @@ function Reveal({
   children,
   delay=1,
   width = "fit-content",
+  view=true,
+  duration=1
 }: {
   children: React.ReactNode;
   delay?: number;
   width?: "fit-content" | "100%";
+  view?: boolean;
+  duration?: number;
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -32,7 +36,8 @@ function Reveal({
         }}
         initial="hidden"
         whileInView="visible"
-        transition={{ duration: 1, delay: delay }}
+        viewport={{ once: view }}
+        transition={{ duration: duration, delay: delay }}
         className="leading-normal"
       >
         {children}
