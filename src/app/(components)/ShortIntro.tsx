@@ -299,7 +299,7 @@ function ShortIntro() {
                     viewport={{once: true}}
                     >
                         <div>
-                            {expertise.map((val: any, index: any) => (
+                            {expertise.map((val: string, index: number) => (
                                 <div className='flex gap-3' key={index}>
                                     <svg className='animate-pulse' width="22" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 13.1855L2.3821 10.8034L8.43001 16.8496L24.5842 0.695435L26.9663 3.07754L8.42833 21.6138L0 13.1855Z" fill="#D2A024" />
