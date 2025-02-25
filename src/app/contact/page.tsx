@@ -109,7 +109,7 @@ function page() {
             </section>
             <section className='pt-20'>
                 <div className="sizer">
-                    <div className="cards flex flex-wrap gap-5 justify-center items-start">
+                    <div className="cards flex flex-wrap gap-5 justify-between items-start">
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
                             whileInView={{ opacity: 1, x: 0 }}
