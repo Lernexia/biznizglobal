@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { useScroll, useTransform, motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 function HowWeWork() {
@@ -35,7 +34,7 @@ function HowWeWork() {
     ];
 
     return (
-        <section className="bg-white pt-20 h-full w-full">
+        <section className="bg-white h-full w-full">
             <div className="sizer">
                 <div className="relative w-full h-full">
                     <motion.div
@@ -52,12 +51,14 @@ function HowWeWork() {
                         {hww_data.map((data, index) => (
                             <motion.div
                                 key={index}
-                                className="card sticky pt-20 top-0 w-full text-white h-[calc(100vh-7rem)]"
+                                className="card  pt-20 overflow-hidden sticky top-0 w-full text-white h-[calc(100vh-7rem)]"
                             >
-                                <div className="card-content w-full h-full relative overflow-hidden">
+                                <div className="card-content w-full h-full relative shadow-xl rounded-[30px] overflow-hidden ">
                                     <div className="card-image w-full h-full ">
-                                        <motion.div className="w-full h-full overflow-hidden rounded-[30px]">
-                                            <div className="absolute  rounded-[30px] top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 to-black/95 z-10"></div>
+                                        <motion.div
+                                            // style={{ y }}
+                                            className="w-full h-full o">
+                                            <div className="absolute   top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 to-black/95 z-10"></div>
                                             <Image
                                                 src={data.image}
                                                 alt="Card Image"
@@ -95,62 +96,4 @@ function HowWeWork() {
 }
 
 export default HowWeWork;
-
-
-
-function Cards({ index, data }: { index: number, data: any }) {
-    const cardRef = useRef(null);
-
-    const { scrollYProgress } = useScroll({
-        target: cardRef, // Target each individual card
-        offset: ["start end", "end end"], // Adjust offset for smooth effect
-    });
-
-    const y = useTransform(scrollYProgress, [0, 1], [20, -100]);
-
-    return (
-        <motion.div
-            ref={cardRef}
-            key={index}
-            className="card sticky top-0 w-full text-white h-[calc(100vh-3.5rem)]"
-            initial={{ scale: 0.75, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-            <div className="card-content w-full h-full relative origin-top">
-                <div className="card-image w-full h-full overflow-hidden rounded-[30px]">
-                    <motion.div
-                        style={{ y }} 
-                        className="w-full h-full overflow-hidden rounded-[30px]"
-                    >
-                        <Image
-                            src={data.image}
-                            alt="Card Image"
-                            width={1000}
-                            height={600}
-                            className="w-full h-full object-cover blur-[1px]"
-                        />
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 to-black/95 z-10"></div>
-                    </motion.div>
-                </div>
-
-                <div className="absolute top-0 left-0 w-full h-full p-8 z-20 flex flex-col justify-center text-start">
-                    <h4 className="text-4xl font-bold max-[770px]:text-2xl">
-                        {data.title}
-                    </h4>
-                    <ul className="list-decimal p-5 max-[630px]:p-1">
-                        {data.content.map((item: string, idx: number) => (
-                            <li
-                                key={idx}
-                                className="text-lg max-[770px]:text-[16px] mt-3 max-[631px]:mt-2 font-medium hyphens-auto break-words max-w-prose text-justify"
-                            >
-                                {item}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </motion.div>
-    );
-}
 

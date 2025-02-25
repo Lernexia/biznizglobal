@@ -3,20 +3,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { AuditingAndAssuranceSVG, BusinessConsultantSVG, IpoListingSVG, TaxationAndAdvisorySVG } from "@/lib/svg/ServicesSVG";
+import Reveal from '@/lib/animations/Revel.animation';
 
 function Services() {
   const services_data = [
-    {
-      title: "Auditing & Assurance",
-      description:
-        "We are specialized in Internal Audit , Due diligence , Stock Audits etc",
-      image: <AuditingAndAssuranceSVG />,
-    },
     {
       title: "Taxation & Advisory",
       description:
         "Your one stop solution for tax planning and consultation for Individuals and corporates",
       image: <TaxationAndAdvisorySVG />,
+    },
+    {
+      title: "Auditing & Assurance",
+      description:
+        "We are specialized in Internal Audit , Due diligence , Stock Audits etc",
+      image: <AuditingAndAssuranceSVG />,
     },
     {
       title: "IPO Listing & Advisory Services",
@@ -33,31 +34,52 @@ function Services() {
   ];
 
   return (
-    <section className="py-20 bg-white min-h-full h-full w-full">
+    <section className="py-20 bg-gold2/0 min-h-full h-full w-full ">
       <div className="sizer">
-        <div className="cards flex gap-5 flex-wrap justify-between items-start max-[900px]:justify-center max-[900px]:gap-10">
+        <div className="cards flex gap-10 flex-wrap justify-stretch items-start max-[900px]:justify-center max-[900px]:gap-10">
           {services_data.map((service, index) => (
             <motion.div
               key={index}
               className="card max-w-[23rem] items-start flex gap-5"
-              initial={{ opacity: 0, y: 30 }} // Initial state: invisible and slightly moved down
-              whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and reset vertical position
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                delay: index * 0.1, // Stagger the animation for each card
-                duration: 0.5, // Animation duration
+                delay: index * 0.1,
+                duration: 0.5,
                 ease: 'easeOut',
               }}
-              viewport={{ once: true }} // Animation triggers only once when the element is in the viewport
+              viewport={{ once: true }}
             >
-              <div className="icon bg-gradient-to-tr from-gold2 to-gold1 shadow-lg animate-pulse w-fit p-3 rounded-b-[30px] rounded-tl-[30px]">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 1 }}
+                viewport={{ amount: 0.5 }}
+                className="icon bg-gradient-to-tr from-gold2 to-gold1 shadow-lg w-fit p-3 rounded-b-[30px] rounded-tl-[30px]">
                 {service.image}
-              </div>
-              <div className="content">
-                <h3 className="font-bold text-xl">{service.title}</h3>
-                <p className="font-light text-md text-justify text-pretty">
+              </motion.div>
+              <motion.div
+                className='content'
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5, duration: 1 }}
+                viewport={{ amount: 0.5 }}
+              >
+                <motion.h4
+                  initial={{ opacity: 0, y: -50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 1 }}
+                  viewport={{ amount: 0.5 }}
+                  className="font-bold text-xl">{service.title}</motion.h4>
+                <motion.p
+                  initial={{ opacity: 0, y: -50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 1 }}
+                  viewport={{ amount: 0.5 }}
+                  className="font-light text-md text-justify text-pretty">
                   {service.description}
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
             </motion.div>
           ))}
         </div>

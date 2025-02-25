@@ -6,16 +6,16 @@ function HS() {
   return (
     <section className="overflow-hidden relative bg-white  py-20">
       <motion.div
-        className="hs my-1 flex gap-3 font-bold text-[5vw] whitespace-nowrap"
+        className="hs my-1 flex gap-3 font-bold text-[5vw] max-xl:text-[7vw] max-lg:text-[8vw] max-md:text-[9vw] max-sm:text-[10vw] whitespace-nowrap"
         animate={{
-          x: '-100%', // Move the text to the left
+          x: '-100%',
         }}
         transition={{
           x: {
-            repeat: Infinity,      // Loop the animation infinitely
-            repeatType: 'loop',    // Ensure it's a smooth looping
-            duration: 20,          // Control the speed of scroll
-            ease: 'linear',        // Make the scrolling smooth
+            repeat: Infinity,
+            repeatType: 'loop',
+            duration: 20,
+            ease: 'linear',
           },
         }}
       >
@@ -28,16 +28,16 @@ function HS() {
       </motion.div>
 
       <motion.div
-        className="hs justify-end my-1 flex gap-3 font-bold text-[5vw] whitespace-nowrap"
+        className="hs justify-end my-1 flex gap-3 font-bold  text-[5vw] max-xl:text-[7vw] max-lg:text-[8vw] max-md:text-[9vw] max-sm:text-[10vw]  whitespace-nowrap"
         animate={{
-          x: '100%', // Move the text to the left
+          x: '100%',
         }}
         transition={{
           x: {
-            repeat: Infinity,      // Loop the animation infinitely
-            repeatType: 'loop',    // Ensure it's a smooth looping
-            duration: 20,          // Control the speed of scroll
-            ease: 'linear',        // Make the scrolling smooth
+            repeat: Infinity,
+            repeatType: 'loop',
+            duration: 20,
+            ease: 'linear',
           },
         }}
       >

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from 'next/font/local';
 import SmoothScrolling from "@/lib/animations/SmoothScrolling";
+import CustomCursor from "@/lib/widget/CustomCursor";
 
 const sansationRegFont = localFont({ src: './Sansation-Regular.ttf' });
 
@@ -23,7 +24,7 @@ export default function RootLayout({
         className={`bg-[#ffff] text-black antialiased ${sansationRegFont.className}`} // Apply the regular font here
       >
         <SmoothScrolling>
-          {children}
+            {children}
         </SmoothScrolling>
       </body>
     </html>

@@ -34,16 +34,21 @@ html {
   }
 }
 
-.landing-page {
+/* .landing-page {
   min-height: 100vh;
 }
-
+ */
 
 
 html,
 body {
   cursor: none;
 }
+
+body, * {
+  cursor: auto !important;
+}
+
 
 .sizer {
   width: 97%;
@@ -62,6 +67,7 @@ body {
   left: 0;
   pointer-events: none;
   z-index: 999;
+  background: #D2A024;
 }
 
 section .pin-spacer {
@@ -81,14 +87,10 @@ font-style: normal;
 font-weight: 700;
 font-size: 128px;
 line-height: 42px;
-/* identical to box height, or 33% */
 display: flex;
 align-items: center;
-
 border: 3px solid #D2A024;
-
 }
-
 
 
 .text-stroke {
@@ -107,3 +109,51 @@ border: 3px solid #D2A024;
   }
 }
 
+.animate-slide-x{
+  animation: slide-x 1s ease-in-out infinite;
+}
+
+@keyframes slide-x {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.scroll-floater {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  padding: 10px;
+  color: white;
+  background-color: rgb(134 93 0 / 0.5);
+  cursor: pointer;
+}
+
+.contact-form input {
+  background-color: transparent;
+  border: 1px solid #D2A024;
+  color: #D2A024;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  outline: none;
+  border-radius: 10px 10px 10px 0;
+}
+
+.contact-form textarea {
+  background-color: transparent;
+  border: 1px solid #D2A024;
+  color: #D2A024;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  outline: none;
+  border-radius: 10px 10px 10px 0;
+}

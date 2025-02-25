@@ -14,7 +14,6 @@ function Hero() {
 
     gsap.registerPlugin(ScrollTrigger);
 
-
     const duration = 4.8
 
     const parallaxRef = useRef(null);
@@ -26,8 +25,8 @@ function Hero() {
             scrollTrigger: {
                 trigger: element,
                 scrub: true,
-                start: 'top top', // Adjust as needed
-                end: 'bottom top', // Adjust as needed
+                start: 'top top',
+                end: 'bottom top',
             },
             scale: 1.28,
             yPercent: -10,
@@ -60,14 +59,14 @@ function Hero() {
                 <div className='bg-gradient-to-b from-black/80 to-black/50 w-full absolute top-0 h-full'></div>
 
             </motion.div>
-            <Nav />
-            <div className="hero-container h-full sizer text-center top-0 flex flex-col items-center justify-center">
+            <Nav duration={duration} />
+            <div className="hero-container h-screen sizer text-center top-0 flex flex-col items-center justify-center">
                 <div className='py-20'>
                     <Reveal delay={duration}>
-                        <h1 className='text-[5vw] max-[1050px]:text-[6vw] max-[820px]:text-[7vw] max-[600px]:text-[8vw] max-[500px]:text-[10vw] font-extrabold leading-none tracking-tight '>ACCOUNTING & AUDITING <br></br> CONSULTANT</h1>
+                        <h1 className='text-[5vw] max-[1050px]:text-[6vw] max-[820px]:text-[7vw] max-[600px]:text-[8vw] max-[500px]:text-[10vw] font-extrabold leading-none -tracking-tight '>ACCOUNTING & AUDITING <br></br> Expert</h1>
                     </Reveal>
                     <Reveal delay={duration}>
-                        <p className='my-10 text-lg max-w-lg m-auto'>Personalized Advice creating wealth strategies tailored For Business People.</p>
+                        <p className='my-10 text-2xl max-w-lg max-md:text-xl max-sm:text-sm m-auto'>Personalized Advice creating wealth strategies tailored For Business People.</p>
                     </Reveal>
 
                     <motion.div
@@ -81,9 +80,9 @@ function Hero() {
                         }
                         viewport={{ once: true }}
                         className='flex justify-center relative gap-5 mb-5'>
-                        <Link href='#' className='relative flex gap-2 items-center shadow-lg justify-center bg-gradient-to-tr from-gold2 to-gold1 px-5 py-2 rounded-br-[30px] rounded-t-[30px] transition-all duration-150 hover:transition-all hover:rounded-[30px]'>Enquiry
+                        <Link href='#' className='relative flex gap-2 items-center shadow-lg justify-center bg-gradient-to-tr from-gold2 to-gold1 px-5 py-2 rounded-br-[30px] rounded-t-[30px] transition-all duration-500 hover:transition-all hover:rounded-[30px]'>Enquiry
                             <Phone size={18} className='animate-pulse' /> </Link>
-                        <Link href='#' className='relative px-5 text-white hover:bg-gradient-to-tr from-gold2 to-gold1 hover:border-transparent border-gold2 py-2 rounded-br-[30px] rounded-t-[30px] flex gap-2 justify-center items-center  transition-all duration-150 hover:transition-all hover:rounded-[30px] border-2 border-transparent bg-clip-border border-image-[linear-gradient(to_right,_#865D00,_#D2A024)_1]'>
+                        <Link href='#' className='relative px-5 text-white hover:bg-gradient-to-tr from-gold2 to-gold1 hover:border-transparent border-gold2 py-2 rounded-br-[30px] rounded-t-[30px] flex gap-2 justify-center items-center  transition-all duration-500 hover:transition-all hover:rounded-[30px] border-2 border-transparent bg-clip-border border-image-[linear-gradient(to_right,_#865D00,_#D2A024)_1]'>
                             More About
                             <MoveUpRight size={20} className='text-white' />
                         </Link>
