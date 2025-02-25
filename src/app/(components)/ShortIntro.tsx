@@ -15,7 +15,7 @@ function ShortIntro() {
     ]
 
     const { scrollYProgress } = useScroll();
-    const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
+    const y = useTransform(scrollYProgress, [0, 1], [0, -500]);
 
     return (
         <section className='min-h-full bg-white  w-full overflow-x-hidden'>

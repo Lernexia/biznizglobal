@@ -16,7 +16,7 @@ function Nav() {
             viewport={{ once: true }}
             className='relative top-0 h-auto'
         >
-            <div className="nav-container max-[750px]:hidden bg-gradient-to-br relative text-lg from-[#484CB0] to-[#1E204A] h-full flex justify-between">
+            {/* <div className="nav-container max-[750px]:hidden bg-gradient-to-br relative text-lg from-[#484CB0] to-[#1E204A] h-full flex justify-between">
                 <div className="nc sizer flex justify-between h-12">
                     <div className="left-nav flex items-center space-x-10 text-[16px]">
                         <div className="nav-log text-white flex items-center space-x-2">
@@ -87,8 +87,8 @@ function Nav() {
                         </Link>
                     </div>
                 </div>
-            </div>
-            <div className="my-3">
+            </div> */}
+            <div className="py-3 bg-white text-black">
                 <div className="nav-cont-2 sizer h-full flex justify-start max-[720px]:justify-between items-center space-x-20">
                     <div className="nav-left-2 ">
                         <Link href="/">

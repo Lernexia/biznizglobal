@@ -1,7 +1,7 @@
 'use client';
 
 import Reveal from '@/lib/animations/Revel.animation'
-import { ArrowDown, MoveUpRight } from 'lucide-react'
+import { ArrowDown, MoveUpRight, Phone } from 'lucide-react'
 import React, { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image';
@@ -15,7 +15,7 @@ function Hero() {
     gsap.registerPlugin(ScrollTrigger);
 
 
-    const duration =4.8
+    const duration = 4.8
 
     const parallaxRef = useRef(null);
 
@@ -81,7 +81,8 @@ function Hero() {
                         }
                         viewport={{ once: true }}
                         className='flex justify-center relative gap-5 mb-5'>
-                        <Link href='#' className='relative bg-gradient-to-tr from-gold2 to-gold1 px-5 py-2 rounded-br-[30px] rounded-t-[30px] transition-all duration-150 hover:transition-all hover:rounded-[30px]'>Enquiry</Link>
+                        <Link href='#' className='relative flex gap-2 items-center shadow-lg justify-center bg-gradient-to-tr from-gold2 to-gold1 px-5 py-2 rounded-br-[30px] rounded-t-[30px] transition-all duration-150 hover:transition-all hover:rounded-[30px]'>Enquiry
+                            <Phone size={18} className='animate-pulse' /> </Link>
                         <Link href='#' className='relative px-5 text-white hover:bg-gradient-to-tr from-gold2 to-gold1 hover:border-transparent border-gold2 py-2 rounded-br-[30px] rounded-t-[30px] flex gap-2 justify-center items-center  transition-all duration-150 hover:transition-all hover:rounded-[30px] border-2 border-transparent bg-clip-border border-image-[linear-gradient(to_right,_#865D00,_#D2A024)_1]'>
                             More About
                             <MoveUpRight size={20} className='text-white' />

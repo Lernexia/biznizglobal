@@ -35,7 +35,7 @@ function HowWeWork() {
     ];
 
     return (
-        <section className="bg-white pt-20">
+        <section className="bg-white pt-20 h-full w-full">
             <div className="sizer">
                 <div className="relative w-full h-full">
                     <motion.div

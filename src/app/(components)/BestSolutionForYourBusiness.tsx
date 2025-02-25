@@ -3,7 +3,6 @@ import { AuditingAndAssuranceSVG, BusinessConsultantSVG, IpoListingSVG, Taxation
 import { MoveUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion'
-import Reveal from '@/lib/animations/Revel.animation';
 
 function BestSolutionForYourBusiness() {
 
@@ -53,7 +52,7 @@ function BestSolutionForYourBusiness() {
 
 
     return (
-        <section className='pb-20 min-h-full h-full bg-white  w-full max-[500px]:pt-20'>
+        <section className='pb-20 min-h-full h-full  w-full max-[500px]:pt-20 bg-white'>
             <div className="sizer">
                 <div className='text-center text-4xl font-bold'>
                     <h4>The Best Solutions for your</h4>

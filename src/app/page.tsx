@@ -37,10 +37,20 @@ export default function Home() {
     initial: {
       y: 0,
       top: 0,
+      scale: 2,
+      opacity: 1,
+      transition: { duration: 1, delay: 0.5 }
+    },
+    animate: {
+      opacity: 0.8,
+      transition: { duration: 1, delay: 0.5 }
     },
     exit: {
-      y: "-100vh",
-      transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1], delay: 0.2 }
+      scale: 5,
+      blur: 100,
+      opacity: 0.1,
+      // y: "-100vh",
+      transition: { duration: 1, delay: 0.5 }
     }
   }
 
@@ -53,12 +63,12 @@ export default function Home() {
 
       <AnimatePresence mode="wait">
         {isLoading && (
-          <div className="bg-gold1/5 h-screen w-screen flex justify-center items-center fixed overflow-hidden">
+          <div className="h-screen w-screen flex justify-center items-center fixed overflow-hidden">
             <motion.div
-              // initial={{ opacity: 0.8, y: 0 }}
+              // initial={{ opacity: 1, scale: 1 }}
               // whileInView={{ opacity: 1, y: 0 }}
-              // exit={{ opacity: 0, y: -50, transition: { duration: 0.5 } }}
-              variants={slideUp} initial="initial" exit="exit"
+              // exit={{ opacity: 1, scale: 2.3, transition: { duration: 0.5, delay: 0.2 } }}
+              variants={slideUp} initial="initial" exit="exit" whileInView='animate'
               className="w-full h-full overflow-hidden flex justify-center items-center"
             >
               <AnimatedText />
@@ -67,7 +77,7 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      
+
       <motion.div
         initial={{ opacity: 0, scale: 1, y: 100, filter: "blur(10px)", background: '#00000046' }}
         whileInView={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)", background: 'transparent' }}
