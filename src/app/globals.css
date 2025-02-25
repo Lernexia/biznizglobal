@@ -40,10 +40,6 @@ html {
  */
 
 
-html,
-body {
-  cursor: none;
-}
 
 body, * {
   cursor: auto !important;

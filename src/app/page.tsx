@@ -1,7 +1,6 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Hero from "./(components)/Hero";
 import ShortIntro from "./(components)/ShortIntro";
@@ -11,11 +10,11 @@ import Services from "./(components)/Services";
 import CompleteDigitalBusinessSolutions from "./(components)/CompleteDigitalBusinessSolutions";
 import BestSolutionForYourBusiness from "./(components)/BestSolutionForYourBusiness";
 import HowWeWork from "./(components)/HowWeWork";
-import { ArrowRight, ArrowUp, Clock, Mail, MapPin, PhoneCall } from "lucide-react";
 import AnimatedText from "@/lib/widget/TextAnimation";
 
 import dynamic from "next/dynamic";
 import Footer from "./(components)/Footer";
+import NextLevel from "./(components)/NextLevel";
 const ScrollFloater = dynamic(() => import("../lib/widget/ScrollFloater"), { ssr: false });
 
 
@@ -101,21 +100,7 @@ export default function Home() {
 
         <HowWeWork />
 
-        <section className="relative bg-gradient-to-tr from-gold1/50 to-blue1/50 py-20">
-          <div className="relative sizer text-center text-white">
-            <h3 className="text-4xl font-semibold max-md:text-3xl">
-              Ready to take your business to the
-              <span className="text-transparent drop-shadow-xl bg-clip-text bg-gradient-to-r from-gold2 to-gold1"> next</span>
-              <span className="text-transparent drop-shadow-xl bg-clip-text bg-gradient-to-r from-blue2 to-blue1"> level?</span>
-            </h3>
-            <h5 className="text-xl max-md:text-lg py-5">Get expert guidance in accounting, auditing, taxation, and business strategy.</h5>
-            <Link href="/contact" className="b bg-gradient-to-r from-blue2 to-blue1 rounded-t-full rounded-br-full font-semibold text-lg max-md:text-sm items-center px-5 py-3 hover:rounded-full transition-all duration-500 flex gap-2 w-fit m-auto">
-              Contact Us
-              <ArrowRight className="animate-slide-x" />
-            </Link>
-            <h5 className="text-xl max-md:text-lg py-5">Contact us for expert solutions today!</h5>
-          </div>
-        </section>
+        <NextLevel />
 
         <Footer />
 

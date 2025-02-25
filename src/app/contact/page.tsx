@@ -5,10 +5,9 @@ import Nav from '../(components)/Nav'
 import Footer from '../(components)/Footer'
 import Image from 'next/image'
 import { useScroll, useTransform, motion } from 'framer-motion';
-import CustomCursor from '@/lib/widget/CustomCursor';
 import { Mail, MapPin, PhoneCall } from 'lucide-react';
 import Link from 'next/link';
-import MapWithPin from '@/lib/widget/Map';
+import NextLevel from '../(components)/NextLevel';
 
 function page() {
     const { scrollYProgress } = useScroll();
@@ -162,6 +161,7 @@ function page() {
                 {/* <MapWithPin /> */}
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d390.75232870341097!2d80.26455263316862!3d13.059263331396853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52663d5637bff7%3A0x92aab9098654c3a7!2sExpress%20Chambers%2C%20EA%20Chambers!5e0!3m2!1sen!2sin!4v1740509670685!5m2!1sen!2sin" className='w-full h-[500px]' style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Google Maps Embed"></iframe>
             </section>
+            <NextLevel />
             <Footer />
         </motion.main>
     )

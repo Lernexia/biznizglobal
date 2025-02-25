@@ -19,7 +19,7 @@ function CustomCursor({ text = "" }: { text?: string }) {
       const link = event.target;
       gsap.to(cursor, { scale: 2 })
       if (cursor) {
-        cursor.style.cursor = 'pointer';
+        cursor.style.cursor = 'none';
       }
       // cursorText.style.display = 'block';
 
