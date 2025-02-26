@@ -16,7 +16,7 @@ function Nav({duration=4.3}: {duration: number}) {
             className='relative top-0 h-auto'
         >
             <div className="py-3 bg-white text-blue1">
-                <div className="nav-cont-2 sizer h-full flex justify-start max-[720px]:justify-between items-center space-x-20">
+                <div className="nav-cont-2 sizer h-full flex justify-between max-[720px]:justify-between items-center space-x-20">
                     <div className="nav-left-2 ">
                         <Link href="/">
                             <svg
