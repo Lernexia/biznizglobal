@@ -8,7 +8,7 @@ function NextLevel() {
             <div className="relative sizer text-center text-white">
                 <h3 className="text-4xl font-semibold max-md:text-3xl">
                     Ready to take your business to the
-                    <span className="text-transparent drop-shadow-xl bg-clip-text bg-gradient-to-r from-gold2 to-gold1"> next</span>
+                    <span className="text-transparent drop-shadow-xl bg-clip-text bg-gradient-to-r from-gold2 via-gold1 to-gold1"> next</span>
                     <span className="text-transparent drop-shadow-xl bg-clip-text bg-gradient-to-r from-blue2 to-blue1"> level?</span>
                 </h3>
                 <h5 className="text-xl max-md:text-lg py-5">Get expert guidance in accounting, auditing, taxation, and business strategy.</h5>
