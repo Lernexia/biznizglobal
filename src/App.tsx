@@ -30,10 +30,10 @@ function App() {
           <div className="flex items-center justify-center gap-2 text-gray-600 mb-8">
             <Mail className="w-5 h-5" />
             <a
-              href="mailto:contact@bizniz.com"
+              href="mailto:contact@biznizglobal.com"
               className="text-blue-600 hover:text-blue-800 transition-colors"
             >
-              contact@bizniz.com
+             contact@biznizglobal.com
             </a>
           </div>
         </div>
